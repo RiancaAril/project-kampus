@@ -11,13 +11,17 @@ interface PropsType {
 }
 
 const Popup = ({ setOpenPopup, setUpdateTable }: PropsType) => {
-  const productData = useAppSelector((state) => state.productReducer);
+  const productData = useAppSelector((state) => state.product) || {
+    name: "",
+    category: "",
+    price: "",
+  };
   const dispatch = useAppDispatch();
 
   const [inputData, setInputData] = useState({
-    name: productData.name,
-    category: productData.category,
-    price: productData.price,
+    name: productData.name || "",
+    category: productData.category || "",
+    price: productData.price || "",
   });
 
   const handleSubmit = (e: FormEvent) => {
@@ -26,9 +30,8 @@ const Popup = ({ setOpenPopup, setUpdateTable }: PropsType) => {
 
     axios
       .put(`/api/edit_product/${productData._id}`, inputData)
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      .then((res) => {
-        makeToast("Product Update Successfully!");
+      .then(() => {
+        makeToast("Product updated successfully!");
         setUpdateTable((prevState) => !prevState);
       })
       .catch((error) => console.log(error))

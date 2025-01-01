@@ -9,19 +9,18 @@ const Hero = () => {
               </p>
   
               <h1 className="text-topHeadingPrimary font-bold text-4xl md:text-5xl">
-                The Best Monitor in 2024
+                Kumpulan Produk Terlaris di 2024
               </h1>
   
               <h3 className="text-2xl font-['Oregano',cursive]">
-                Exclusive Offer <span className="text-red-600">-10%</span> off
-                this week
+              Harga Turun Sampai <span className="text-red-600">-10%</span> Dalam Minggu ini
               </h3>
   
               <a
                 className="inline-block bg-white rounded-md px-6 py-3 hover:bg-accent hover:text-white"
                 href="#"
               >
-                Shop Now
+                Belanja Sekarang!
               </a>
             </div>
           </div>

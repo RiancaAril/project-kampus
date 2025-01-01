@@ -50,7 +50,7 @@ const Dashboard = () => {
                             <th>Nama</th>
                             <th>Harga</th>
                             <th>Gambar</th>
-                            <th>Aksi</th>
+                            <th>Edit/Hapus</th>
                         </tr>
                     </thead>
                     <tbody>

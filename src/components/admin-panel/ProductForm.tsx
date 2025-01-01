@@ -87,7 +87,7 @@ const ProductForm = () => {
         </div>
 
         <div>
-            <label className='block ml-1'>Kategori Produk</label>
+            <label className='block ml-1'>Harga Produk</label>
             <input className='bg-gray-300 w-full px-4 py-2 border outline-pink rounded-md' type="text"
             value={payload.price}
             onChange={(e) => setPayload({...payload, price: e.target.value})} 
